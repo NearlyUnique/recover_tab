@@ -8,14 +8,16 @@ export async function update() {
     let active = refresh(state, tabs, currentWindow);
 
     if (active) {
-        document.getElementById("recover").hidden = false;
+        document.getElementById("recover_tab").hidden = false;
         document.getElementById("recover_title").innerText = active.title;
         document.getElementById("recover_img").setAttribute("src", active.favIconUrl);
         document.getElementById("recover_tab").addEventListener("click", async () => {
             await chrome.tabs.update(active.id, { url: active.url });
         });
+        document.getElementById("nothing").hidden = true;
     } else {
-        document.getElementById("recover").hidden = true;
+        document.getElementById("recover_tab").hidden = true;
+        document.getElementById("nothing").hidden = false;
     }
     await save(state);
     displayTabList(state);
@@ -103,10 +105,11 @@ export function preparePage(document) {
         .addEventListener("click", async () => {
             await update();
         });
+    let el = document.querySelector("ul");
+    el.hidden = true;
     let btn = document.getElementById("toggle_show");
     btn.addEventListener("click", () => {
-        let el = document.querySelector("ul");
         btn.innerText = el.hidden ? "Hide" : "Show Tabs";
-        el.hidden != el.hidden;
+        el.hidden = !el.hidden;
     });
 }
