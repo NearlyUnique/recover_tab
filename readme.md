@@ -1,6 +1,6 @@
 # Overview
 
-An extension to remember the last "useful" url for a tab. Especially handy when your enterprise SSO solution forces a restart
+A Chrome extension to remember the last "useful" url for a tab. Especially handy when your enterprise SSO solution forces a restart
 of your browser and the SSO solution loses the tab history so even after authenticating, you and it fails for non user/password reasons you stand a chance of recovering what the tab was.
 
 # Installation
