@@ -18,6 +18,16 @@ This won't have been published to the Extension Store so it has to be side loade
 2. Find the "Recover Tab" extension
 3. Click the update button `⟳`
 
+# Usage
+
+Go to options and add any URLs that break your experience. These are the specific tabs that this chrome extension is trying to help you with
+
+e.g.
+```
+https://<some_SSO_solution>.com
+https://<typical_auth_sub_domain>.<my_company>.com
+```
+
 # Strucutre
 
 - `recover.js` - the meat of the code
