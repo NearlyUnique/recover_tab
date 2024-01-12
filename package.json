@@ -1,0 +1,9 @@
+{
+  "name": "recover-tab",
+  "version": "1.0.0",
+  "main": "recover.test.js",
+  "scripts": {
+    "test": "node recover.test.js"
+  },
+  "type": "module"
+}

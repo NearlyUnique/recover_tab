@@ -1,0 +1,21 @@
+{
+    "name": "Recover Tab",
+    "description": "When you tab history gets lost, bring back the last useful page",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "main.html",
+      "default_icon": "recover_tab.png"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+      },
+    "permissions":[
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": { "service_worker": "background.js" }
+  }
