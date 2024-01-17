@@ -32,8 +32,16 @@ function isActiveTab(tab, currentWindow) {
     return tab.active && tab.highlighted;
 }
 function keepMinimal(obj) {
-    // to strip out unused attributes
-    return obj;
+    return {
+        id: obj.id,
+        index: obj.index,
+        windowId: obj.windowId,
+        title: obj.title,
+        url: obj.url,
+        favIconUrl: obj.favIconUrl,
+        active: obj.active,
+        highlighted: obj.highlighted,
+    };
 }
 /// updates state
 export function refresh(state, latest, currentWindow) {
@@ -62,7 +70,9 @@ export function refresh(state, latest, currentWindow) {
     for (let i = maxLen - 1; i >= 0; i--) {
         const found = latest.findIndex(x => x.id === state.tabs[i].id);
         if (found === -1) {
-            state.tabs.splice(i, 1);
+            // state.tabs.splice(i, 1);
+            // temp, don't remove it, just mark it
+            state.tabs[i].toRemove = true;
         }
     }
     return active;

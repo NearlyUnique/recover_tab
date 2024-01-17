@@ -43,6 +43,12 @@ export function assertEqual(expected, actual, msg) {
         throw new Error(`NOT_EQUAL expected '${expandObjectForLog(expected)}', actual '${expandObjectForLog(actual)}'${msg}`);
     }
 }
+export function assertHasNoValue(actual, msg) {
+    if (actual !== null && actual !== undefined) {
+        msg = msg ? (` (${msg})`) : ("");
+        throw new Error(`HAS_VALUE expected no value, got '${expandObjectForLog(actual)}'${msg}`);
+    }
+}
 export function skip(reason) {
     throw new SkipTestError(reason);
 }
