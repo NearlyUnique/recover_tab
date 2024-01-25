@@ -7,10 +7,13 @@ of your browser and the SSO solution loses the tab history so even after authent
 
 This won't have been published to the Extension Store so it has to be side loaded.
 
-1. In Chrome go to `chrome://extensions/`
-2. Enable "Developer Mode" (top right)
-3. Click "Loadd unpacked" (top left)
-4. Select the folder where you unzipped these files
+1. Download the zip file
+   a. ([Download](https://codeload.github.com/NearlyUnique/recover_tab/zip/refs/heads/main))
+   b. unzip to a folder on you computer
+2. In Chrome go to `chrome://extensions/`
+3. Enable "Developer Mode" (top right)
+4. Click "Loadd unpacked" (top left)
+5. Select the folder where you unzipped these files (step 1b)
 
 ## To update
 
